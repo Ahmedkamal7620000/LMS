@@ -49,7 +49,8 @@
             </p>
 
             <!-- Form -->
-            <form>
+            <form method="post" action="{% url 'register' %}">
+                {% csrf_token %}
               <div class="row">
                 <div class="col-12 col-md-6">
 
@@ -126,7 +127,8 @@
 
                     <div class="modal-body">
                         <!-- Form Signin -->
-                        <form class="mb-5">
+                        <form class="mb-5" method="post" action="{% url 'register' %}">
+                            {% csrf_token %}
 
                             <!-- Email -->
                             <div class="form-group mb-5">
@@ -186,7 +188,7 @@
 
                     <div class="modal-body">
                         <!-- Form Signup -->
-                        <form class="mb-5" method="post" action="{% url 'register' %} ">
+                        <form class="mb-5" method="post" action="{% url 'register' %}">
                              {% csrf_token %}
                             <!-- Username -->
                             <div class="form-group mb-5">
@@ -242,7 +244,8 @@
 
                     <div class="modal-body">
                         <!-- Form Recover Password -->
-                        <form class="mb-5">
+                        <form class="mb-5"method="post" action="{% url 'register' %}">
+                            {% csrf_token %}
                             <!-- Email -->
                             <div class="form-group">
                                 <label for="modalForgotpasswordEmail">
@@ -732,7 +735,8 @@
             </ul>
 
             <!-- Search -->
-            <form class="d-none d-wd-flex ms-5 w-xl-450p">
+            <form class="d-none d-wd-flex ms-5 w-xl-450p" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
                 <div class="input-group border rounded">
                     <div class="input-group-prepend">
                         <button class="btn btn-sm my-2 my-sm-0 text-secondary icon-xs d-flex align-items-center" type="submit">
@@ -1234,7 +1238,8 @@
                     <div class="collapse position-absolute right-0 left-0" id="collapseSearchMobile">
                         <div class="card card-body p-4 mt-7 shadow-dark">
                             <!-- Search -->
-                            <form class="w-100">
+                            <form class="w-100" method="post" action="{% url 'register' %}">
+                                {% csrf_token %}
                                 <div class="input-group border rounded">
                                     <div class="input-group-prepend">
                                         <button class="btn btn-sm text-secondary icon-xs d-flex align-items-center" type="submit">
@@ -1323,7 +1328,8 @@
                 <h3 class="mb-6">Sign Up and Start Learning!</h3>
 
                 <!-- Form Register -->
-                <form class="mb-5">
+                <form class="mb-5" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
 
                     <!-- Username -->
                     <div class="form-group mb-5">
